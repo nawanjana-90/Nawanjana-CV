@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificates</title>
+<link rel="icon" type="image/png" href="logo.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body {
+    background: linear-gradient(135deg, #000000, #1a0000);
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+/* Sidebar Navigation */
+nav {
+    background-color: #800808;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+}
+nav a:hover {
+    background-color: #a00a0a;
+    color: #ffea08;
+    padding-left: 30px;
+}
+.active { background-color: #5c0000; color: #ecf023; }
+
+/* Main Content */
+.content { margin-left: 220px; padding: 60px 30px; animation: fadeIn 1.2s ease; }
+h2 { text-align: center; color: #ffea08; margin-top: 40px; margin-bottom: 20px; }
+
+/* Category Buttons */
+.category-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.category-buttons button {
+    background: #800808;
+    color: #ffea08;
+    border: 2px solid #ffea08;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.category-buttons button.active-btn {
+    background: #ffea08;
+    color: #800808;
+}
+.category-buttons button:hover {
+    background: #ffea08;
+    color: #800808;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+.slide { display: none; width: 100%; text-align: center; }
+.photo-box {
+    background: #1a0000;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+}
+.photo-box:hover { transform: scale(1.03); }
+.photo-box img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 2px solid #ffea08;
+    background: #fff;
+}
+.photo-box p {
+    margin: 12px 0 5px;
+    font-size: 16px;
+    color: #ffea08;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #000;
+}
+.slide.active { display: block; animation: slideIn 0.6s ease; }
+
+/* Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffea08;
+    font-size: 24px;
+    padding: 10px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    user-select: none;
+    z-index: 10;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.prev:hover, .next:hover { background: #ffea08; color: #800808; }
+
+@keyframes fadeIn { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+@keyframes slideIn { from {opacity:0; transform:translateX(50px);} to {opacity:1; transform:translateX(0);} }
+
+nav a i { margin-right: 10px; font-size: 18px; }
+footer { background: #111; padding: 20px; text-align: center; font-size: 14px; color: #bbb; margin-top: auto; }
+footer a { color: #ffea08; margin: 0 10px; text-decoration: none; }
+footer a:hover { color: #fff; }
+@media (max-width:768px){ .content{margin-left:0; padding:30px 15px;} .photo-box img{height:200px;} }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html"><i class="fas fa-user"></i> About me</a>
+  <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+  <a href="Certifications page.html" class="active"><i class="fas fa-certificate"></i> Certificate</a>
+  <a href="Extra Curricular page.html"><i class="fas fa-futbol"></i> Extra Curricular</a>
+  <a href="Projects.html"><i class="fas fa-code"></i> Projects</a>
+  <a href="Connect.html"><i class="fas fa-envelope"></i> Connect</a>
+</nav>
+
+<div class="content">
+    <h2>Other Certifications</h2>
+    <div class="category-buttons">
+        <button class="active-btn" onclick="showCategory('web')">Web</button>
+        <button onclick="showCategory('programming')">Programming</button>
+        <button onclick="showCategory('design')">Graphic Design</button>
+    </div>
+
+    <!-- Slideshows -->
+    <div id="web" class="slideshow-container">
+        <div class="slide"><div class="photo-box"><img src="6.png" alt="Web1"><p>Web Designing for Beginners</p></div></div>
+        <div class="slide"><div class="photo-box"><img src="7.png" alt="Web2"><p>HTML & CSS Essentials</p></div></div>
+        <a class="prev" onclick="changeSlide(-1, 'web')">&#10094;</a>
+        <a class="next" onclick="changeSlide(1, 'web')">&#10095;</a>
+    </div>
+
+    <div id="programming" class="slideshow-container" style="display:none">
+        <div class="slide"><div class="photo-box"><img src="8.jpeg" alt="Python"><p>Python for Beginners</p></div></div>
+        <div class="slide"><div class="photo-box"><img src="10.png" alt="Java"><p>Java Programming for Beginners</p></div></div>
+        <a class="prev" onclick="changeSlide(-1, 'programming')">&#10094;</a>
+        <a class="next" onclick="changeSlide(1, 'programming')">&#10095;</a>
+    </div>
+
+    <div id="design" class="slideshow-container" style="display:none">
+        <div class="slide"><div class="photo-box"><img src="9.jpeg" alt="Excel"><p>Microsoft Excel Formulas</p></div></div>
+        <div class="slide"><div class="photo-box"><img src="11.png" alt="Photoshop"><p>Adobe Photoshop for Beginners</p></div></div>
+        <a class="prev" onclick="changeSlide(-1, 'design')">&#10094;</a>
+        <a class="next" onclick="changeSlide(1, 'design')">&#10095;</a>
+    </div>
+</div>
+
+<script>
+const slideshows = {
+    'web': { index: 0, slides: null },
+    'programming': { index: 0, slides: null },
+    'design': { index: 0, slides: null }
+};
+
+function initializeSlideshows(){
+    for(let id in slideshows){
+        slideshows[id].slides = document.querySelectorAll(`#${id} .slide`);
+        showSlide(id, 0);
+        setInterval(()=>{ changeSlide(1,id); }, 5000);
+    }
+}
+
+function showSlide(slideshowId,index){
+    const slideshow = slideshows[slideshowId];
+    if(!slideshow.slides || slideshow.slides.length===0) return;
+    if(index>=slideshow.slides.length) index=0;
+    if(index<0) index=slideshow.slides.length-1;
+    slideshow.index=index;
+    slideshow.slides.forEach(slide=>slide.classList.remove('active'));
+    slideshow.slides[slideshow.index].classList.add('active');
+}
+
+function changeSlide(direction, slideshowId){
+    const slideshow = slideshows[slideshowId];
+    showSlide(slideshowId, slideshow.index + direction);
+}
+
+// Show category
+function showCategory(cat){
+    document.querySelectorAll('.slideshow-container').forEach(s=>s.style.display='none');
+    document.getElementById(cat).style.display='block';
+    document.querySelectorAll('.category-buttons button').forEach(b=>b.classList.remove('active-btn'));
+    document.querySelector(`.category-buttons button[onclick="showCategory('${cat}')"]`).classList.add('active-btn');
+}
+
+window.onload = initializeSlideshows;
+</script>
+
+<footer>
+<p>© 2025 Nawanjana Jeewanthi | Connect on 
+<a href="https://www.linkedin.com/in/nawanjana-ekanayaka-109a0b2aa">LinkedIn</a> | 
+<a href="https://github.com/nawanjana-90">GitHub</a> | 
+<a href="mailto:nawanjanaekanayaka2002@gmail.com">Email</a> |
+<a href="https://www.behance.net/nawanjaekanaya">Behance</a>
+</p>
+</footer>
+
+</body>
+</html>

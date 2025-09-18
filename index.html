@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nawanjana</title>
+
+<link rel="icon" type="image/png" href="logo.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #000000, #1a0000);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+nav {
+  background-color: #800808;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #a00a0a;
+  color: #ffea08;
+  padding-left: 30px;
+}
+
+nav a.active {
+  background-color: #5c0000;
+  color: #ecf023;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 220px;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+  flex: 1;
+}
+
+/* Photo with Ash Splash */
+.photo-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+.body-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.ash-splash {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: auto;
+  max-width: 280px;
+  background: url('ash-splash.png') no-repeat center/cover;
+  z-index: 1;
+  filter: brightness(0.5);
+}
+
+/* Welcome Note */
+.welcome-note {
+  position: relative;
+  background: rgba(50,50,50,0.8);
+  padding: 25px 30px;
+  border-radius: 25px;
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.welcome-note::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: rgba(50,50,50,0.8);
+  border-radius: 50%;
+  bottom: -15px;
+  left: 40px;
+}
+
+.welcome-note::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: rgba(50,50,50,0.8);
+  border-radius: 50%;
+  bottom: -25px;
+  left: 20px;
+}
+
+/* Connect Button */
+.connect-btn {
+  display: block;
+  background: #770c0c;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 50px;
+  margin: 40px auto 20px auto;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.connect-btn:hover {
+  background: #ffc107;
+  color: #800808;
+  transform: scale(1.07);
+}
+
+/* Footer */
+footer {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #bbb;
+  margin-top: auto;
+}
+
+footer a {
+  color: #ffea08;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    padding: 10px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  }
+
+  nav a {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .photo-wrapper {
+    max-width: 80%;
+  }
+
+  .welcome-note {
+    max-width: 90%;
+    font-size: 16px;
+  }
+
+  .ash-splash {
+    top: -5%;
+    left: -5%;
+    width: 110%;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="active"><i class="fas fa-user"></i> About me</a>
+  <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+  <a href="Certifications page.html"><i class="fas fa-certificate"></i> Certificate</a>
+  <a href="Extra Curricular page.html"><i class="fas fa-futbol"></i> Extra Curricular</a>
+  <a href="Projects.html"><i class="fas fa-code"></i> Projects</a>
+  <a href="Connect.html"><i class="fas fa-envelope"></i> Connect</a>
+</nav>
+
+<div class="main-content">
+  <div class="photo-wrapper">
+    <div class="ash-splash"></div>
+    <img src="logo.jpg" alt="Nawanjana Photo" class="body-photo">
+  </div>
+
+  <div class="welcome-note">
+    Hi, I’m <b>Nawanjana Jeewanthi</b>.  
+    This is my personal space on the web where I share who I am and what I do.  
+    Exploring the world of technology, design, and innovation.  
+    I enjoy bringing ideas to life—whether it’s through coding, creating designs, or learning something new every day.  
+    This website is a glimpse into my journey—my projects, passions, and the little things that inspire me.  
+    I hope as you explore, you get to know not just my work, but also a bit of the person behind it.
+  </div>
+</div>
+
+<a href="connect.html" class="connect-btn">Let's Connect</a>
+
+<footer>
+  <p>© 2025 Nawanjana Jeewanthi | Connect on 
+    <a href="https://www.linkedin.com/in/nawanjana-ekanayaka-109a0b2aa">LinkedIn</a> | 
+    <a href="https://github.com/nawanjana-90">GitHub</a> | 
+    <a href="mailto:nawanjanaekanayaka2002@gmail.com">Email</a> |
+    <a href="https://www.behance.net/nawanjaekanaya">Behance</a>
+  </p>
+</footer>
+
+</body>
+</html>

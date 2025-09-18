@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Extra Curricular</title>
+<link rel="icon" type="image/png" href="logo.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  body {
+    background: linear-gradient(135deg, #000000, #1a0000);
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: #fff;
+  }
+
+  /* Sidebar Navigation */
+  nav {
+    background-color: #800808;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.6);
+    z-index: 1000;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #a00a0a;
+    color: #ffea08;
+    padding-left: 30px;
+  }
+
+  nav a.active {
+    background-color: #5c0000;
+    color: #ecf023;
+  }
+
+  nav a i {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+
+  /* Main Content */
+  .content {
+    margin-left: 220px;
+    padding: 60px 30px;
+    animation: fadeIn 1.2s ease;
+  }
+
+  h2 {
+    text-align: center;
+    color: #ffea08;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .details-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+
+  /* Slideshow Styles */
+  .slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 30px auto;
+    overflow: hidden;
+  }
+
+  .slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Certificate photo box */
+  .photo-box {
+    background: #1a0000;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+  }
+
+  .photo-box:hover {
+    transform: scale(1.03);
+  }
+
+  .photo-box img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 2px solid #ffea08;
+    background: #fff;
+  }
+
+  .photo-box p {
+    margin: 12px 0 5px;
+    font-size: 16px;
+    color: #ffea08;
+    font-weight: 600;
+  }
+
+  .slide.active {
+    display: block;
+    animation: slideIn 0.6s ease;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffea08;
+    font-size: 24px;
+    padding: 10px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    user-select: none;
+    z-index: 10;
+  }
+
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  .prev:hover, .next:hover {
+    background: #ffea08;
+    color: #800808;
+  }
+
+  .divider {
+    height: 4px;
+    background: linear-gradient(to right, #ffea08, #fff176);
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(255,234,8,0.5);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @media (max-width: 768px) {
+    .content { margin-left: 0; padding: 30px 15px; }
+    .photo-box img { height: 200px; }
+  }
+
+  footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+    margin-top: auto;
+  }
+
+  footer a {
+    color: #ffea08;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: #fff;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Sidebar Navigation -->
+<nav>
+  <a href="index.html"><i class="fas fa-user"></i> About me</a>
+  <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+  <a href="Certifications page.html"><i class="fas fa-certificate"></i> Certificate</a>
+  <a href="Extra Curricular page.html"><i class="fas fa-futbol"></i> Extra Curricular</a>
+  <a href="Projects.html"><i class="fas fa-code"></i> Projects</a>
+  <a href="Connect.html"><i class="fas fa-envelope"></i> Connect</a>
+</nav>
+
+<div class="content">
+  <h2> Extra Curricular Certifications</h2>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container" id="cert-slideshow">
+      <div class="slide">
+        <div class="photo-box">
+          <img src="12.jpg" alt="Certificate 1">
+          <p>Computer Scientist Competition</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="photo-box">
+          <img src="13.jpg" alt="Certificate 2">
+          <p>Chess - 2nd runner up (Inter Faculty competition)</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="photo-box">
+          <img src="14.jpg" alt="Certificate 3">
+          <p>2nd place - Zonal Drama Competition</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="photo-box">
+          <img src="15.jpg" alt="Certificate 4">
+          <p>Provincial Chess Tournament</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="photo-box">
+          <img src="16.jpg" alt="Certificate 5">
+          <p>Inter-house Sportsmeet 2018</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="photo-box">
+          <img src="17.jpg" alt="Certificate 6">
+          <p>Zonal Chess Competition</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="photo-box">
+          <img src="18.jpg" alt="Certificate 7">
+          <p>Inter-house Sportsmeet 2018</p>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <a class="prev" onclick="changeSlide(-1, 'cert-slideshow')">&#10094;</a>
+      <a class="next" onclick="changeSlide(1, 'cert-slideshow')">&#10095;</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Nawanjana Jeewanthi | Connect on 
+    <a href="https://www.linkedin.com/in/nawanjana-ekanayaka-109a0b2aa">LinkedIn</a> | 
+    <a href="https://github.com/nawanjana-90">GitHub</a> | 
+    <a href="mailto:nawanjanaekanayaka2002@gmail.com">Email</a> |
+    <a href="https://www.behance.net/nawanjaekanaya">Behance</a>
+  </p>
+</footer>
+
+<script>
+  // Automatic Navigation Highlight
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll("nav a");
+  navLinks.forEach(link => {
+    if(link.getAttribute("href") === currentPage){
+      link.classList.add("active");
+    }
+  });
+
+  // Slideshow
+  const slideshows = { 'cert-slideshow': { index: 0, slides: null } };
+  function initializeSlideshows() {
+    for (let id in slideshows) {
+      slideshows[id].slides = document.querySelectorAll(`#${id} .slide`);
+      showSlide(id, 0);
+      setInterval(() => { changeSlide(1, id); }, 5000);
+    }
+  }
+  function showSlide(slideshowId, index) {
+    const slideshow = slideshows[slideshowId];
+    if (!slideshow.slides || slideshow.slides.length === 0) return;
+    if (index >= slideshow.slides.length) index = 0;
+    if (index < 0) index = slideshow.slides.length - 1;
+    slideshow.index = index;
+    slideshow.slides.forEach(slide => slide.classList.remove('active'));
+    slideshow.slides[slideshow.index].classList.add('active');
+  }
+  function changeSlide(direction, slideshowId) {
+    const slideshow = slideshows[slideshowId];
+    showSlide(slideshowId, slideshow.index + direction);
+  }
+  window.onload = initializeSlideshows;
+</script>
+
+</body>
+</html>

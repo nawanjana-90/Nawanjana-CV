@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect</title>
+<link rel="icon" type="image/png" href="logo.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #000000, #1a0000, #330000);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+nav {
+    background-color: #800808;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #a00a0a;
+    color: #ffea08;
+    padding-left: 30px;
+}
+
+nav a.active {
+    background-color: #5c0000;
+    color: #ecf023;
+}
+
+nav a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Main Content */
+.content {
+    margin-left: 220px;
+    padding: 60px 30px;
+    animation: fadeIn 1.2s ease;
+}
+
+/* Titles */
+.main-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 40px;
+    color: #ffea08;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(255,234,8,0.5);
+}
+
+.sub-title1 {
+    color: #ff5555;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.sub-title2 {
+    color: #ddd;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* Contact Cards */
+.contact-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.contact-card:hover {
+    background: rgba(255, 234, 8, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255,234,8,0.3);
+}
+
+.contact-card i {
+    font-size: 32px;
+    color: #ffea08;
+    transition: transform 0.3s;
+}
+
+.contact-card:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.contact-card a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.contact-card a:hover {
+    color: #ffea08;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+    margin-top: auto;
+}
+
+footer a {
+    color: #ffea08;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        padding: 10px 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .content {
+        margin-left: 0;
+        padding: 30px 15px;
+    }
+    .main-title {
+        font-size: 32px;
+        flex-wrap: wrap;
+    }
+    .sub-title1 {
+        font-size: 22px;
+    }
+    .sub-title2 {
+        font-size: 18px;
+    }
+    .contact-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contact-card i {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html"><i class="fas fa-user"></i> About me</a>
+  <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+  <a href="Certifications page.html"><i class="fas fa-certificate"></i> Certificate</a>
+  <a href="Extra Curricular page.html"><i class="fas fa-futbol"></i> Extra Curricular</a>
+  <a href="Projects.html"><i class="fas fa-code"></i> Projects</a>
+  <a href="Connect.html" class="active"><i class="fas fa-envelope"></i> Connect</a>
+</nav>
+
+<!-- Main Content -->
+<div class="content">
+    <h1 class="main-title"><i class="fas fa-address-book"></i> Contact</h1>
+    <h2 class="sub-title1">If you need further details</h2>
+    <h3 class="sub-title2">Please contact me through any channel below</h3>
+
+    <div class="contact-card">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+94775933816">+94 77 5933 816</a>
+    </div>
+
+    <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:nawanjanaekanayaka2002@gmail.com">nawanjanaekanayaka2002@gmail.com</a>
+    </div>
+
+    <div class="contact-card">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/nawanjana-ekanayaka-109a0b2aa" target="_blank">
+            Nawanjana Ekanayaka (LinkedIn)
+        </a>
+    </div>
+
+    <div class="contact-card">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/nawanjana-90">nawanjana-90</a>
+    </div>
+
+    <div class="contact-card">
+       <i class="fab fa-behance"></i>
+        <a href="https://behance.net/yourprofile">Nawanjana Ekanayaka</a>
+    </div>
+</div>
+
+<footer>
+  <p>© 2025 Nawanjana Jeewanthi | Connect on 
+    <a href="https://www.linkedin.com/in/nawanjana-ekanayaka-109a0b2aa">LinkedIn</a> | 
+    <a href="https://github.com/nawanjana-90">GitHub</a> | 
+    <a href="mailto:nawanjanaekanayaka2002@gmail.com">Email</a> |
+    <a href="https://www.behance.net/nawanjaekanaya">Behance</a>
+  </p>
+</footer>
+
+</body>
+</html>
