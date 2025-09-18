@@ -62,7 +62,7 @@ nav a.active {
   padding: 40px;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 40px;
   flex: 1;
 }
@@ -94,7 +94,7 @@ nav a.active {
   filter: brightness(0.5);
 }
 
-/* Welcome Note */
+/* Welcome Note aligned right */
 .welcome-note {
   position: relative;
   background: rgba(50,50,50,0.8);
@@ -103,6 +103,9 @@ nav a.active {
   max-width: 600px;
   font-size: 18px;
   line-height: 1.6;
+  margin-left: auto;   /* push to right */
+  margin-right: 20px;  /* space from right */
+  text-align: left;
 }
 
 .welcome-note::after {
@@ -113,7 +116,8 @@ nav a.active {
   background: rgba(50,50,50,0.8);
   border-radius: 50%;
   bottom: -15px;
-  left: 40px;
+  right: 40px;  /* right side tail */
+  left: auto;
 }
 
 .welcome-note::before {
@@ -124,7 +128,8 @@ nav a.active {
   background: rgba(50,50,50,0.8);
   border-radius: 50%;
   bottom: -25px;
-  left: 20px;
+  right: 20px;  /* right side tail */
+  left: auto;
 }
 
 /* Connect Button */
@@ -201,6 +206,8 @@ footer a:hover {
   .welcome-note {
     max-width: 90%;
     font-size: 16px;
+    margin-right: auto;  /* center in mobile */
+    margin-left: auto;
   }
 
   .ash-splash {
@@ -213,6 +220,7 @@ footer a:hover {
 </head>
 <body>
 
+<!-- Sidebar Navigation -->
 <nav>
   <a href="index.html" class="active"><i class="fas fa-user"></i> About me</a>
   <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
@@ -220,18 +228,28 @@ footer a:hover {
   <a href="Extra Curricular page.html"><i class="fas fa-futbol"></i> Extra Curricular</a>
   <a href="Projects.html"><i class="fas fa-code"></i> Projects</a>
 </nav>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="photo-wrapper">
+    <div class="ash-splash"></div>
+    <img src="logo.jpg" alt="Nawanjana Photo" class="body-photo">
+  </div>
+
   <div class="welcome-note">
-    Hi, I’m <b>Nawanjana Jeewanthi</b>.  
-    This is my personal space on the web where I share who I am and what I do.  
-    Exploring the world of technology, design, and innovation.  
-    I enjoy bringing ideas to life—whether it’s through coding, creating designs, or learning something new every day.  
-    This website is a glimpse into my journey—my projects, passions, and the little things that inspire me.  
+    Hi, I’m <b>Nawanjana Jeewanthi</b>.<br><br>
+    This is my personal space on the web where I share who I am and what I do.<br><br>
+    Exploring the world of technology, design, and innovation.<br><br>
+    I enjoy bringing ideas to life—whether it’s through coding, creating designs, or learning something new every day.<br><br>
+    This website is a glimpse into my journey—my projects, passions, and the little things that inspire me.<br><br>
     I hope as you explore, you get to know not just my work, but also a bit of the person behind it.
   </div>
 </div>
 
+<!-- Connect Button -->
 <a href="connect.html" class="connect-btn">Let's Connect</a>
 
+<!-- Footer -->
 <footer>
   <p>© 2025 Nawanjana Jeewanthi | Connect on 
     <a href="https://www.linkedin.com/in/nawanjana-ekanayaka-109a0b2aa">LinkedIn</a> | 
@@ -243,6 +261,3 @@ footer a:hover {
 
 </body>
 </html>
-
-
-
