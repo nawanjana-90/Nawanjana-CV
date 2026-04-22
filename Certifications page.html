@@ -657,6 +657,7 @@
     <button class="active-btn" onclick="showCategory('web')">Web Development</button>
     <button onclick="showCategory('programming')">Programming</button>
     <button onclick="showCategory('design')">Design & Tools</button>
+    <button onclick="showCategory('appreciation')">Honors & awards</button>
   </div>
 
   <!-- Web Development Slideshow -->
@@ -724,7 +725,37 @@
     <a class="prev" onclick="changeSlide(-1, 'design')">&#10094;</a>
     <a class="next" onclick="changeSlide(1, 'design')">&#10095;</a>
   </div>
-
+ <!-- Programming Slideshow -->
+  <div id="programming" class="slideshow-container" style="display:none" data-aos="fade-up">
+    <div class="slide">
+      <div class="photo-box">
+        <img src="8.jpeg" alt="Python for Beginners">
+        <p>Python for Beginners</p>
+      </div>
+    </div>
+     <!-- honor & award Slideshow -->
+  <div id="appreciation" class="slideshow-container" style="display:none" data-aos="fade-up">
+    <div class="slide">
+      <div class="photo-box">
+        <img src="LEO1.jpg" alt="CERTIFICATE">
+        <p>Green Horizon Project - Media Coordinator</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="photo-box">
+        <img src="LEO2.jpg" alt="AWARD">
+        <p>Everyday Hero Award (mid year conference)</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="photo-box">
+        <img src="BITSA.Jpg" alt="AWARD2">
+        <p>Refreshment Coordinator - 23/24 batch department welcome</p>
+      </div>
+    </div>
+    <a class="prev" onclick="changeSlide(-1, 'appreciation')">&#10094;</a>
+    <a class="next" onclick="changeSlide(1, 'appreciation')">&#10095;</a>
+  </div>
   <!-- Slide Indicators -->
   <div class="slide-indicators" id="slideIndicators"></div>
 </div>
